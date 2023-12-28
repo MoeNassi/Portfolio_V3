@@ -1,0 +1,238 @@
+@font-face {
+    font-family: reg;
+    src: url("../tools/reg.otf");
+}
+@font-face {
+    font-family: stretch;
+    src: url("../tools/stretch.otf");
+}
+@font-face {
+    font-family: coultor;
+    src: url("../tools/coultor.otf");
+}
+@font-face {
+    font-family: azonix;
+    src: url("../tools/Azonix.otf");
+}
+@font-face {
+    font-family: code;
+    src: url("../tools/code.otf");
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    height: 200svh;
+    background-color: #2B2E4A;
+    overflow-x: hidden;
+}
+.header {
+    display: flex;
+    position: fixed;
+    top: 61px;
+    left: 73px;
+}
+.header p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    color: white;
+    position: relative;
+    top: 21px;
+    left: -7px;
+}
+img {
+    width: 60px;
+    height: 50px;
+}
+.container {
+    height: 100svh;
+}
+.body {
+    color: white;
+    font-family: coultor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    position: relative;
+    top: 150px;
+    height: 50svh;
+}
+.text {
+    max-width: 450px;
+    font-size: 35px;
+    text-align: center;
+}
+.button {
+    margin-top: 20px;
+}
+.scroll {
+    text-decoration: none;
+    color: white;
+}
+.scroll::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    transition: .4s;
+}
+.scroll:hover::before {
+    width: 100%;
+}
+.hide {
+    position: relative;
+    transition: .4s;
+    transform: translateX(-100px);
+    opacity: 0;
+}
+.reveal {
+    position: relative;
+    transition: .4s;
+    transform: translateX(0px);
+    opacity: 1;
+}
+.infos {
+    position: relative;
+    height: 100svh;
+}
+.line {
+    position: relative;
+    left: 313px;
+    width: 1px;
+    height: 221px;
+    background-color: white;
+    margin-bottom: 16px;
+    box-shadow: 0px 0px 15px white;
+}
+.circle {
+    position: relative;
+    left: 308px;
+    width: 12px;
+    height: 12px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-bottom: 16px;
+    box-shadow: 0px 0px 15px white;
+}
+.pre {
+    transition: .3s;
+}
+.circle p {
+    position: relative;
+    color: white;
+    left: 30px;
+    font-family: coultor;
+    width: 150px;
+    top: 50%;
+    transform: translateY(-40%);
+    font-size: 16px;
+    cursor: pointer;
+}
+.last_line {
+    position: relative;
+    left: 313px;
+    width: 1px;
+    height: 221px;
+    background-color: white;
+    margin-bottom: 16px;
+}
+.last_line::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 53px;
+    height: 1px;
+    background-color: white;
+}
+.active {
+    width: 20px;
+    height: 20px;
+    box-shadow: 0px 0px 15px #E84545;
+    left: 303px;
+    margin-bottom: 12px;
+    margin-top: -4px;
+    background-color: #E84545;
+}
+.content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    filter: blur(4px);
+    background-color: #b6bbc453;
+    backdrop-filter: blur(4px);
+    border-radius: 6px;
+    width: 1448px;
+    height: 150px;
+    position: relative;
+    left: 49px;
+    top: 27px;
+    transition: .4s;
+    cursor: pointer;
+}
+.copyright {
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    font-size: 12px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.show_content {
+    background-color: #7a7a7ab0;
+    filter: blur(0px);
+}
+.skills {
+    border-radius: 6px;
+    background-color: white;
+    width: 70px;
+    height: 70px;
+}
+.content:hover {
+    filter: blur(0px);
+}
+.content .icons {
+    width: 50px;
+    height: 50px;
+}
+.height { /*-->>>CHANGE THIS<<<<--*/
+    height: 798px;
+    visibility: visible;
+}
+::-webkit-scrollbar {
+    width: 13px;
+}
+::-webkit-scrollbar-thumb {
+    background: #E84545;
+    transition: .4s;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #8b2525;
+}
+::-webkit-scrollbar-track {
+    background: #111329b6;
+}
+.project {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.name {
+    font-family: azonix;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: .2s;
+}
+.name:hover {
+    color: rgb(194, 194, 194);
+}
