@@ -208,6 +208,12 @@ img {
 .content .icons {
     width: 50px;
     height: 50px;
+    transition: .5s;
+    perspective: 34000px;
+}
+.content .icons:hover {
+    filter: drop-shadow(5px 5px 0px rgba(0, 0, 0, 0.447));
+    transform: scale(1.1);
 }
 .height { /*-->>>CHANGE THIS<<<<--*/
     height: 798px;
@@ -242,15 +248,16 @@ img {
 }
 .deli {
     width: 100%;
-    height: 15px;
+    height: 100svh;
     filter: blur(10px);
-    background-color: #5c31be;
+    border: 5px solid #5c31be;
+    position: absolute;
     animation: colored 3s infinite linear;
 }
 @keyframes colored {
-    0% { background-color: #5c31be; }
-    20% { background-color: #ab2bea; }
-    40% { background-color: #dd3843; }
-    60% { background-color: #e627cf; }
-    100% { background-color: #5c31be; }
+    0% { border: 5px solid #5c31be; }
+    20% { border: 5px solid #ab2bea; }
+    40% { border: 5px solid #dd3843; }
+    60% { border: 5px solid #e627cf; }
+    100% { border: 5px solid #5c31be; }
 }
