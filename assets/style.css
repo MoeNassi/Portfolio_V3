@@ -41,6 +41,7 @@ body {
     color: white;
     position: relative;
     top: 21px;
+    cursor: default;
     left: -7px;
 }
 img {
@@ -69,6 +70,7 @@ img {
     max-width: 450px;
     font-size: 35px;
     text-align: center;
+    transition: .3s;
 }
 .button {
     margin-top: 20px;
@@ -253,6 +255,16 @@ img {
     border: 5px solid #5c31be;
     position: absolute;
     animation: colored 3s infinite linear;
+}
+.text h1 {
+    transition: .5s;
+    cursor: pointer;
+    letter-spacing: 3px;
+}
+.text h1:hover {
+    text-shadow: cyan -3px 0,
+        red 3px 0;
+	color: rgb(209, 209, 209);
 }
 @keyframes colored {
     0% { border: 5px solid #5c31be; }
