@@ -1,6 +1,9 @@
+var pos = 0
 var window_heigth = window.innerHeight
 const par = document.querySelector('infos')
 var getLang = document.querySelectorAll('.lang')
+const cont_ = document.querySelector('.content')
+const icons = document.querySelectorAll('.content .icons')
 
 window.addEventListener('scroll', reveal)
 grow()
@@ -44,4 +47,16 @@ function style_it(circle) {
     var id = parent.querySelector('.content')
     parent.querySelector('.pre').style.fontSize = "25px"
     id.classList.add('show_content')
+}
+
+icons.forEach(icon => {
+    icon.addEventListener('mousedown', ()=> {
+        cont_.style.cursor = "grabbing"
+        drag(icon)
+    })
+});
+
+function drag(icon, e) {
+    pos = cont_.style.innerHeight
+    console.log(pos)
 }
