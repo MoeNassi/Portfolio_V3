@@ -6,7 +6,10 @@ var getLang = document.querySelectorAll('.lang')
 const cont_ = document.querySelectorAll('.circle')
 const icons = document.querySelectorAll('.content .icons')
 const aboutme = document.getElementById('zero')
+var lol = document.querySelector('.sr')
+const tl = gsap.timeline({default : {ease : 'power2.out'}});
 
+tl.fromTo(".sl", {x: "0"}, {x: "1920px"}, duration = .5)
 window.addEventListener('scroll', reveal)
 grow()
 
@@ -76,9 +79,10 @@ aboutme.addEventListener('click', ()=> {
     setTimeout(()=> {
         document.documentElement.style.setProperty('--content_height', '900px')
         document.documentElement.style.setProperty('--content_width', '1448px')
+        lol.classList.add('move')
         document.querySelector('.infos').classList.add('slider')
-    }, 1500)
-    setTimeout(()=> window.location.href = '../aboutme.html', 2000)
+    }, 1000)
+    setTimeout(()=> window.location.href = '../aboutme.html', 1450)
 })
 
 function copy() {

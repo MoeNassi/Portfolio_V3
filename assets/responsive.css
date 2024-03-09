@@ -1,6 +1,8 @@
 @media screen and (max-width: 2560px) {
     :root {
         --pageWi: 2560px;
+        --content_width: 1448px;
+        --otherW: 1448px;
     }
 }
 @media screen and (max-width: 1920px) {

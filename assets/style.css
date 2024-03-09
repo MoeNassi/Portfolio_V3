@@ -350,7 +350,7 @@ img {
     transform: translateX(-2000px);
 }
 .copy {
-	position: absolute;
+	position: fixed;
 	bottom: 90px;
 	background-color: rgb(71, 233, 71);
 	color: white;
@@ -364,7 +364,7 @@ img {
 	transition: .4s;
 }
 .err {
-	position: absolute;
+	position: fixed;
 	bottom: 90px;
 	background-color: rgb(233, 71, 71);
 	color: white;
@@ -379,4 +379,27 @@ img {
 }
 .show {
 	opacity: 1;
+}
+.sl {
+    position: absolute;
+	width: 100%;
+	height: 100svh;
+	background-color: #28224d;
+	z-index: 15;
+    transition: .4s;
+    transform: translateX(0px);
+}
+.sr {
+    position: absolute;
+	width: 150%;
+	height: 150svh;
+	background-color: #28224d;
+	z-index: 15;
+    transition: .4s all;
+    transform: translateX(100%);
+}
+.move {
+    position: absolute;
+    transform: translateX(-150%);
+    transition: 1.6s all;
 }
