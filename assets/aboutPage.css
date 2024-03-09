@@ -5,7 +5,7 @@
 }
 @font-face {
 	font-family: n;
-	src: url(../tools/new.otf);
+	src: url(../tools/lol.ttf);
 }
 .container {
 	background: linear-gradient(90deg, #353053 40%, transparent), url(../tools/b.jpg);
@@ -40,7 +40,7 @@
 	gap: 30px;
 }
 .biography .goofy {
-	font-family: n;
+	font-family: Arial, Helvetica, sans-serif;
 	font-size: 16px;
 	text-align: center;
 }
@@ -62,6 +62,7 @@ a p, a img {
 	top: 50%;
 	transform: translateY(-50%);
 	font-size: 20px;
+	font-weight: bold;
 }
 .image .me {
 	box-shadow: 0px 0px 15px white;
