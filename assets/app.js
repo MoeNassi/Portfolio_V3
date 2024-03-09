@@ -1,9 +1,10 @@
-var pos = 0
+var index = 0;
 var window_heigth = window.innerHeight
 const par = document.querySelector('infos')
 var getLang = document.querySelectorAll('.lang')
-const cont_ = document.querySelector('.content')
+const cont_ = document.querySelectorAll('.circle')
 const icons = document.querySelectorAll('.content .icons')
+const aboutme = document.getElementById('zero')
 
 window.addEventListener('scroll', reveal)
 grow()
@@ -49,14 +50,32 @@ function style_it(circle) {
     id.classList.add('show_content')
 }
 
-icons.forEach(icon => {
-    icon.addEventListener('mousedown', ()=> {
-        cont_.style.cursor = "grabbing"
-        drag(icon)
-    })
-});
+// icons.forEach(icon => {
+//     icon.addEventListener('mousedown', ()=> {
+//         cont_.style.cursor = "grabbing"
+//         drag(icon)
+//     })
+// });
 
-function drag(icon, e) {
-    pos = cont_.style.innerHeight
-    console.log(pos)
-}
+// function drag(icon, e) {
+//     pos = cont_.style.innerHeight
+//     console.log(pos)
+// }
+
+var text = document.getElementById('s')
+
+aboutme.addEventListener('click', ()=> {
+    var selected = getComputedStyle(document.documentElement)
+    selected.getPropertyValue('--content_height')
+    selected.getPropertyValue('--content_width')
+    text.style.opacity = "0"
+    document.documentElement.style.setProperty('--content_height', '900px')
+    for (let i = 1; i < cont_.length; i++)
+    cont_[i].classList.add('hide_it')
+    setTimeout(()=> {
+        document.documentElement.style.setProperty('--content_height', '900px')
+        document.documentElement.style.setProperty('--content_width', '1448px')
+        document.querySelector('.infos').classList.add('slider')
+    }, 1500)
+    setTimeout(()=> window.location.href = '../aboutme.html', 2000)
+})
