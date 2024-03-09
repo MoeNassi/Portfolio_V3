@@ -65,7 +65,7 @@ a p, a img {
 	font-weight: bold;
 }
 .image .me {
-	box-shadow: 0px 0px 15px white;
+	box-shadow: 0px 0px 55px 5px white;
 }
 .rightside {
 	position: absolute;
@@ -107,4 +107,35 @@ a:hover {
 	background-color: #353053;
 	z-index: 15;
 	transition: .4s;
+}
+.copy {
+	position: absolute;
+	bottom: 90px;
+	background-color: rgb(71, 233, 71);
+	color: white;
+	opacity: 0;
+	padding: 10px 30px;
+	border-radius: 5px;
+	font-size: 20px;
+	box-shadow: 0 0 15px rgb(71, 233, 71);
+	left: 50%;
+	transform: translateX(-50%);
+	transition: .3s;
+}
+.err {
+	position: absolute;
+	bottom: 90px;
+	background-color: rgb(233, 71, 71);
+	color: white;
+	opacity: 0;
+	padding: 10px 30px;
+	border-radius: 5px;
+	font-size: 20px;
+	box-shadow: 0 0 15px rgb(233, 71, 71);
+	left: 50%;
+	transform: translateX(-50%);
+	transition: .3s;
+}
+.show {
+	opacity: 1;
 }
