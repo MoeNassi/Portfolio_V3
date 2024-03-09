@@ -1,5 +1,6 @@
 var index = 0;
 var window_heigth = window.innerHeight
+console.log(window_heigth)
 const par = document.querySelector('infos')
 var getLang = document.querySelectorAll('.lang')
 const cont_ = document.querySelectorAll('.circle')
@@ -13,7 +14,7 @@ function reveal() {
     const elements = document.querySelectorAll('.hide')
     for (let i = 0; i < elements.length; i++) {
         var element_hei = elements[i].getBoundingClientRect().top
-        var window = 100
+        var window = 150
         if (element_hei < window_heigth - window)
             elements[i].classList.add('reveal')
         else
@@ -79,3 +80,20 @@ aboutme.addEventListener('click', ()=> {
     }, 1500)
     setTimeout(()=> window.location.href = '../aboutme.html', 2000)
 })
+
+function copy() {
+	var text = "MedAitSwa#2746"
+	navigator.clipboard.writeText(text)
+	.then(()=> {
+		element.textContent = "copied"
+		element.classList.add('copy')
+	})
+	.catch(()=> {
+		element.textContent = "failed"
+		element.classList.add('err')
+	})
+	var element = document.createElement('div')
+	document.querySelector('.infos').appendChild(element)
+	element.classList.add('show')
+	setTimeout(()=> element.classList.remove('show'), 2000)
+}

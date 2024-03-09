@@ -1,0 +1,19 @@
+@media screen and (max-width: 2560px) {
+    :root {
+        --pageWi: 2560px;
+    }
+}
+@media screen and (max-width: 1920px) {
+    :root {
+        --pageWi: 1920px;
+        --content_width: 1300px;
+        --otherW: 1300px;
+    }
+}
+@media screen and (max-width: 1080px) {
+    :root {
+        --pageWi: 1080px;
+        --content_width: 460px;
+        --otherW: 460px;
+    }
+}

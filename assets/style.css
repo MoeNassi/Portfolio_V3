@@ -1,6 +1,8 @@
 :root {
     --content_height: 150px;
     --content_width: 1448px;
+    --pageWi: 2550px;
+    --otherW: 1448px
 }
 @font-face {
     font-family: reg;
@@ -55,6 +57,7 @@ img {
 }
 .container {
     height: 100svh;
+    width: var(--pageWi);
     background: url(../tools/m.jpg);
     filter: hue-rotate(-55deg);
     background-position: center;
@@ -112,7 +115,8 @@ img {
 }
 .infos {
     position: relative;
-    height: 100svh;
+    height: 150svh;
+    width: var(--pageWi);
 }
 .line {
     position: relative;
@@ -183,7 +187,7 @@ img {
     background-color: #b6bbc453;
     backdrop-filter: blur(4px);
     border-radius: 6px;
-    width: 1448px;
+    width: var(--otherW);
     height: 150px;
     position: relative;
     left: 49px;
@@ -287,7 +291,7 @@ img {
     color: rgb(194, 194, 194);
 }
 .deli {
-    width: 100%;
+    width: var(--pageWi);
     height: 150svh;
     filter: blur(10px);
     border: 5px solid #5c31be;
@@ -344,4 +348,35 @@ img {
     position: relative;
     transition: .5s;
     transform: translateX(-2000px);
+}
+.copy {
+	position: absolute;
+	bottom: 90px;
+	background-color: rgb(71, 233, 71);
+	color: white;
+	opacity: 0;
+	padding: 10px 30px;
+	border-radius: 5px;
+	font-size: 20px;
+	box-shadow: 0 0 15px rgb(71, 233, 71);
+	left: 50%;
+	transform: translateX(-50%);
+	transition: .4s;
+}
+.err {
+	position: absolute;
+	bottom: 90px;
+	background-color: rgb(233, 71, 71);
+	color: white;
+	opacity: 0;
+	padding: 10px 30px;
+	border-radius: 5px;
+	font-size: 20px;
+	box-shadow: 0 0 15px rgb(233, 71, 71);
+	left: 50%;
+	transform: translateX(-50%);
+	transition: .3s;
+}
+.show {
+	opacity: 1;
 }
